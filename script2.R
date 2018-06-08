@@ -32,6 +32,8 @@ test <- combi[892:1309,]
 fit <- rpart(Survived ~ Pclass + Sex + Age + SibSp + Parch + Fare + Embarked + Title + FamilySize + FamilyID,
              data=train, 
              method="class")
-library(rattle)
-library(rpart.plot)
-library(RColorBrewer)
+library(rpart)
+Prediction <- predict(fit, test)
+submit <- data.frame(PassengerId = test$PassengerId, Survived = Prediction)
+write.csv(submit, file = "dforest.csv", row.names = FALSE)
+
