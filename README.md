@@ -34,3 +34,13 @@ Accuracy: 0.75119
 script7.R -> Conditional Forest applied again, with different parameters.
 Accuracy: 0.78947
 After statistical observation, removed some redundant features from the prediction model.
+
+script8.R -> Random Forest algorithm applied on the features selected in previous model (after removing redundant ones) and with the Passenger Class feature treated as a factor instead of a numeric.
+Accuracy: 0.79904
+
+script9.R -> Slight changes to previous script, considering some more features. Random Forest again.
+Accuracy: 0.79425
+
+script10.R -> Tried tuning the random forest parameters in script9.R to improve accuracy.
+Accuracy: 0.79904 (Improved compared to script9 but similar to script8 which considered less features).
+
