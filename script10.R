@@ -35,7 +35,7 @@ combi$FamilyID2 <- as.character(combi$FamilyID2)
 combi$FamilyID2[combi$FamilySize <= 3] <- 'Small'
 combi$FamilyID2 <- factor(combi$FamilyID2)
 combi$Child <- 0
-combi$Child[train$Age<17] <- 1
+combi$Child[combi$Age<17] <- 1
 library(caret)
 combi= combi[,-c(4,6,9,10,11,15,16)]
 combi$Pclass <- factor(combi$Pclass)
